@@ -73,17 +73,16 @@ $$
 ### Interpretability
 To interpret which regions of the input maps contribute most to cosmological inference, three interpretability techniques are employed:
 
-1. **Saliency Maps**
-   $$S_i(x) = \frac{\partial f(x)}{\partial x_i}$$
-   Measures local sensitivity of the output to each input pixel.
+1. **Saliency Maps **
+   $$\left(S_i(x) = \frac{\partial f(x)}{\partial x_i}\right)$$
+    Measures local sensitivity of the output to each input pixel.
 
-2. **Integrated Gradients**
-   $$IG_i(x) = (x_i - x'_i) \int_0^1 \frac{\partial f(x' + \alpha(x - x'))}{\partial x_i} d\alpha$$
-   Provides a global attribution score from a baseline input \( x' \) (e.g., a blank or noisy image) to the actual input.
+2. **Integrated Gradients **
+   $$\left(IG_i(x) = (x_i - x'_i) \int_0^1 \frac{\partial f(x' + \alpha(x - x'))}{\partial x_i} d\alpha\right)$$
+    Provides a global attribution score from a baseline input \( x' \) (e.g., a blank or noisy image) to the actual input.
 
-3. **GradientSHAP**
-   $$\phi_i(x) = \mathbb{E}_{x' \sim p(x')} \left[ (x_i - x'_i) \int_0^1 \frac{\partial f(x' + \alpha(x - x')) {\partial x_i} d\alpha \right]$$
-   Extends Integrated Gradients by averaging over multiple baselines, capturing feature interactions and uncertainty.
+3. **GradientSHAP **
+   $$\left(\phi_i(x) = \mathbb{E}_{x' \sim p(x')} \left[ (x_i - x'_i) \int_0^1 \frac{\partial f(x' + \alpha(x - x'))} {\partial x_i} d\alpha \right]\right)$$ Extends Integrated Gradients by averaging over multiple baselines, capturing feature interactions and uncertainty.
 
 All interpretability analyses are implemented using the **Captum** library in PyTorch.
 
