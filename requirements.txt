@@ -1,0 +1,18 @@
+# Core scientific and numerical libraries
+numpy
+matplotlib
+
+# Deep learning framework
+torch
+torchvision
+torchaudio
+captum
+
+# Hyperparameter optimization
+optuna
+
+# Cosmological data analysis (Pylians3 includes Pk_library, density_field_library, smoothing_library)
+pylians3
+
+# Optional utilities
+tqdm
