@@ -95,6 +95,9 @@ To interpret which regions of the input maps contribute most to cosmological inf
 
 All interpretability analyses are implemented using the **Captum** library in PyTorch.
 
+![Interpretability Maps](results/interpret_maps.jpg)
+
+
 ---
 
 ## Key Results
