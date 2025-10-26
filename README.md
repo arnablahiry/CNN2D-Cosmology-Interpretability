@@ -24,7 +24,14 @@ Each simulation varies two cosmological parameters, Ωₘ (total matter density)
 ASN1, ASN2, AAGN1, and AAGN2.  
 
 From each simulation, two-dimensional total matter density maps of size **256 × 256** at **z = 0** are extracted.  
-These maps serve as inputs to the CNN.
+These maps serve as inputs to the CNN.  
+
+Case-wise **data modification, retraining, and testing** are performed to compare the resulting **R² scores** across different conditions.  
+The cases include:  
+1. **Density-based modifications**, where pixels above or below specified overdensity or underdensity thresholds are masked.  
+2. **Fourier scale cuts**, implemented using the **Pylians3** library ([documentation](https://pylians3.readthedocs.io/en/master/)), where top-hat **kₘₐₓ** cuts are applied at various scales to limit information to specific Fourier modes.
+
+
 
 ---
 
