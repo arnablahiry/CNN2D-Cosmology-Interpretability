@@ -23,6 +23,8 @@ This study uses data from the **IllustrisTNG Latin Hypercube (LH) set** of the *
 Each simulation varies two cosmological parameters, Ωₘ (total matter density) and σ₈ (amplitude of linear fluctuations), as well as four astrophysical feedback parameters:
 ASN1, ASN2, AAGN1, and AAGN2.  
 
+![Total Matter Density Map Grid](/Users/arnablahiry/repos/CNN2D-Cosmology-Interpretability/results/arepo_tng.png)
+
 From each simulation, two-dimensional total matter density maps of size **256 × 256** at **z = 0** are extracted.  
 These maps serve as inputs to the CNN.  
 
