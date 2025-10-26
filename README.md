@@ -51,10 +51,7 @@ $$
 The CNN is trained to minimize a custom loss function that accounts for both prediction accuracy and variance estimation.  
 For each parameter **θᵢ**, the loss function is defined as:
 
-$$
-L = \sum_{i=1}^{6} \log\left( \sum_{j \in \text{batch}} (\theta_{i,j} - \mu_{i,j})^2 \right)
-   + \sum_{i=1}^{6} \log\left( \sum_{j \in \text{batch}} ((\theta_{i,j} - \mu_{i,j})^2 - \sigma_{i,j}^2)^2 \right)
-$$
+$$L = \sum_{i=1}^{6} \log\left( \sum_{j \in \text{batch}} (\theta_{i,j} - \mu_{i,j})^2 \right) + \sum_{i=1}^{6} \log\left( \sum_{j \in \text{batch}} ((\theta_{i,j} - \mu_{i,j})^2 - \sigma_{i,j}^2)^2 \right)$$
 
 This formulation encourages the network to predict both accurate mean values and consistent uncertainty estimates for each parameter.
 
